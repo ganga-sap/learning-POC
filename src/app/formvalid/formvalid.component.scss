@@ -1,0 +1,33 @@
+.container {
+    width: 300px;
+    margin: auto;
+    background: #CCFFFF;
+    padding: 20px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #000000;
+    font-size: 28px;
+}
+
+.textbox {
+    width: 100%;
+    padding: 5px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 5PX;
+    height: 100px;
+}
+
+.button {
+    float: right;
+    padding: 10px 30px;
+    background-color: #CCCCCC;
+    border: #999999 1px solid;
+    margin-top: 10px;
+    cursor: pointer;
+}

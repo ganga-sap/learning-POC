@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Registration Form</h2>
+    <!-- Required Div Starts Here -->
+    <form id="myform" name="myform" [formGroup]="reactiveForm">
+
+        <div>
+            <label>Name :</label>
+            <input formControlName="fname" id="name" type="text" class="textbox">
+        </div>
+
+        <div>
+            <label>Email :</label>
+            <input formControlName="femail" id="email" type="text" class="textbox">
+        </div>
+
+        <div>
+            <label>Phone No :</label>
+            <input formControlName="fphoneno" id="phoneno" type="text" class="textbox">     </div>
+
+        <div>
+            <label>Address :</label>
+            <textarea formControlName="faddress" name="address" id="address" class="textarea"></textarea>     </div>
+
+        <div>
+        </div>
+        <p id="error" style="color:#FF0000; float:left;"></p>
+        <input id="submit" type="button" (click)="onsubmit()" value="Submit" class="button">
+
+    </form>
+    <div style="clear:both;"></div>
