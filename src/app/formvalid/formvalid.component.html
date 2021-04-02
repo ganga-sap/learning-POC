@@ -1,32 +1,41 @@
-<div class="container">
+<div class="container" *ngIf="regform">
     <h2>Registration Form</h2>
-    
-    <form id="myform" name="myform" [formGroup]="reactiveForm" (ngSubmit)="onsubmit(reactiveForm)">
+
+    <form id="myform" name="myform" [formGroup]="reactiveForm">
 
         <div>
             <label>Name :</label>
-            <input formControlName="fname" id="name" type="text" class="textbox">
-            <div *ngIf="reactiveForm.controls['fname'].hasError(required)"></div>
+            <input formControlName="fname" type="text" class="textbox">
+            <div *ngIf="reactiveForm.controls['fname'].hasError('required')" class="error-block">Fields required</div>
         </div>
 
         <div>
             <label>Email :</label>
-            <input formControlName="femail" id="email" type="text" class="textbox">
-            <div *ngIf="reactiveForm.controls['femail'].hasError(required)"></div>
+            <input formControlName="femail" type="text" class="textbox">
+            <div *ngIf="reactiveForm.controls['femail'].hasError('required')" class="error-block">Fields required</div>
         </div>
 
         <div>
             <label>Phone No :</label>
-            <input formControlName="fphoneno" id="phoneno" type="text" class="textbox">     </div>
-            <div *ngIf="reactiveForm.controls['fphoneno'].hasError(required)"></div>
+            <input formControlName="fphoneno" type="text" class="textbox">
+        </div>
+        <div *ngIf="reactiveForm.controls['fphoneno'].hasError('required')" class="error-block">Fields required</div>
         <div>
             <label>Address :</label>
-            <textarea formControlName="faddress" name="address" id="address" class="textarea"></textarea>     </div>
-            <div *ngIf="reactiveForm.controls['faddress'].hasError(required)"></div>
-        <div>
+            <textarea formControlName="faddress" name="address" class="textarea"></textarea>
         </div>
+        <div *ngIf="reactiveForm.controls['faddress'].hasError('required')" class="error-block">Fields required</div>
         
+
         <input id="submit" type="button" (click)="onsubmit()" value="Submit" class="button">
 
     </form>
-    <div style="clear:both;"></div>
+
+</div>
+
+<div *ngIf="edu">
+    <app-education [stuValue]="Details" (objValue)="getValue($event)"></app-education>
+</div>
+<div  class="container" *ngIf="details">
+Your details are successfully submitted
+</div>

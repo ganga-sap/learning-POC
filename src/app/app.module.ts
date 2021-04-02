@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ComComponent } from './com/com.component';
 import { FormvalidComponent } from './formvalid/formvalid.component';
 import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { EducationComponent } from './education/education.component';
 
  
  
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
   declarations: [
     AppComponent,
     ComComponent,
-    FormvalidComponent
+    FormvalidComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,

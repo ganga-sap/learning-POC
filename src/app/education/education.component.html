@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Education Details</h2>
+
+    <form id="myform" name="myform" [formGroup]="eduForm">
+        <div>
+            <label>Institution name :</label>
+            <input formControlName="cname" type="text" class="textbox">
+            <div *ngIf="eduForm.controls['cname'].hasError('required')" class="error-block">Fields required</div>
+        </div>
+        <div>
+            <label>Passed out :</label>
+            <input formControlName="pout" type="text" class="textbox">
+            <div *ngIf="eduForm.controls['pout'].hasError('required')" class="error-block">Fields required</div>
+        </div>
+        <div>
+            <label>Percentage :</label>
+            <input formControlName="perc" type="text" class="textbox">
+            <div *ngIf="eduForm.controls['perc'].hasError('required')" class="error-block">Fields required</div>
+        </div>
+        <div>
+            <input id="submit" type="button" (click)="onsubmit()" value="Submit" class="button">
+        </div>
+    </form>

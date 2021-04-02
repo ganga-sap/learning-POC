@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Parent } from '../models/user';
 @Component({
   selector: 'app-formvalid',
   templateUrl: './formvalid.component.html',
@@ -8,20 +9,36 @@ import{ FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormvalidComponent implements OnInit {
    register:any="";
   reactiveForm: FormGroup;
-  constructor(private _fb: FormBuilder) { }
+  Details = new Parent();
+  regform=true;
+  edu=false;
+  details=false;
+  constructor(private _fb: FormBuilder) {}
+  
   
   ngOnInit(): void {
     this.reactiveForm = this._fb.group({
-      fname : ["",Validators.required],
-      femail : ["",Validators.required],
-      fphoneno : ["",Validators.required],
-      faddress : ["",Validators.required],
+      fname : ['',Validators.required],
+      femail : ['',Validators.required],
+      fphoneno : ['',Validators.required],
+      faddress : ['',Validators.required]
     });
   }
-  
-  onsubmit(reactiveForm) {
+ 
+   onsubmit() {
+    
+     this.Details=this.reactiveForm.value;
     console.log(this.reactiveForm.value);
+    this.regform=false;
+    this.edu=true;
 
+  }
+  getValue(data:Parent)
+  {
+   this.Details= data;
+   console.log(data);
+   this.details=true;
+   this.edu=false;
   }
 }
 
