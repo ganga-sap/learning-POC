@@ -26,7 +26,7 @@ export class EducationComponent implements OnInit {
     this.stuValue.child = this.eduForm.value;
     this.objValue.emit(this.stuValue);
     console.log(this.stuValue);
-
+    
 
 }
 }

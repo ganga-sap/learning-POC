@@ -36,6 +36,14 @@
 <div *ngIf="edu">
     <app-education [stuValue]="Details" (objValue)="getValue($event)"></app-education>
 </div>
-<div  class="container" *ngIf="details">
+<div  class="container" text-align:center *ngIf="details">
+   
 Your details are successfully submitted
+<div>Name:{{Details.fname}}</div>
+<div>Email id:{{Details.femail}}</div>
+<div>Phone no:{{Details.fphoneno}}</div>
+<div>Address:{{Details.faddress}}</div>
+<div>Institution name:{{Details.child.cname}}</div>
+<div>Passed out:{{Details.child.pout}}</div>
+<div>Percentage:{{Details.child.perc}}</div>
 </div>
