@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "95339a8c-b2c6-4426-bfb8-dc1efaf19b0d",
+		"name": "employee-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\": \"Meena  \",\r\n    \"phoneno\": \"234567887 \",\r\n    \"email\":  \"ganga@gmail.com\",\r\n    \"address\": \"Trichy\",\r\n    \"bank_acc_no\": \" 09876544567\",\r\n    \"pan_card_no\": \"234567887 \",\r\n    \"dob\":  \"26/04/99\",\r\n    \"bloodgroup\": \"O+ve\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employees/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\": \"geetha\",\r\n    \"phoneno\": \"234564567\",\r\n    \"email\":  \"geetha@gmail.com\",\r\n    \"address\": \"Chennai\",\r\n    \"dob\": \"14/06/1999\",\r\n    \"bloodgroup\": \"B+ve\",\r\n    \"pan_card_no\": \"5434567567824\",\r\n    \"bank_acc_no\": \"024201000087534\"\r\n\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employees/delete/9",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees/delete/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"delete",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
